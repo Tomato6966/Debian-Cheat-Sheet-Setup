@@ -1,12 +1,12 @@
 # How-to-setup-your-Linux-Server
 How to setup your linux server and install nodejs, python, ffmpeg and java. Working good for Discord Bot hosting and other hostings!
 
-# Console cmds
-*Those commands are all needed to install and setup a Debian (Linux) Server for Bot hosting, and general stuff like everything!*
-
-# youtube tutorial:
+## youtube tutorial:
 
 [![](http://img.youtube.com/vi/mj0nKw3GQlc/0.jpg)](http://www.youtube.com/watch?v=mj0nKw3GQlc "Linux Tutorial")
+
+# Console cmds
+*Those commands are all needed to install and setup a Debian (Linux) Server for Bot hosting, and general stuff like everything!*
 
 ## installing essentials!
 **1. Install sudo**
