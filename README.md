@@ -97,5 +97,6 @@ How to setup your linux server and install nodejs, python, ffmpeg and java. Work
 - `$` ```sudo vim /etc/profile.d/jdk.sh```
 #### ADD:
 - ```export JAVA_HOME=/usr/local/jdk-11.0.2 ```
+
    ```export PATH=$PATH:$JAVA_HOME/bin```
 - `$` ```java -version```
