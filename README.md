@@ -1,5 +1,5 @@
 # How-to-setup-your-Linux-Server
-How to setup your linux server and install nodejs, python, ffmpeg and java. Working good for Discord Bot hosting and other hostings!
+How to setup your Linux Server and install nodejs, python, ffmpeg and java. Working good for Discord Bot hosting and other hostings!
 
 ## youtube tutorial:
 
