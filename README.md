@@ -1,6 +1,8 @@
 # How-to-setup-your-Linux-Server
 How to setup your Linux Server and install nodejs, python, ffmpeg and java. Working good for Discord Bot hosting and other hostings!
 
+## [**DISCORD SUPPORT SERVER INVITE**](https://support.milrato.eu)
+
 ## youtube tutorial:
 
 [![](http://img.youtube.com/vi/mj0nKw3GQlc/0.jpg)](http://www.youtube.com/watch?v=mj0nKw3GQlc "Linux Tutorial")
@@ -101,7 +103,17 @@ How to setup your Linux Server and install nodejs, python, ffmpeg and java. Work
    ```export PATH=$PATH:$JAVA_HOME/bin```
 - `$` ```java -version```
 
-## BEST HOSTING | Bittmax.de
+# SUPPORT ME AND MILRATO DEVELOPMENT
+
+You can always Support me by inviting one of my **own Discord Bots**
+
+[![2021's best Music Bot | Lava Music](https://cdn.discordapp.com/attachments/748533465972080670/817088638780440579/test3.png)](https://lava.milrato.eu)
+[![Musicium Music Bot](https://cdn.discordapp.com/attachments/742446682381221938/770055673965707264/test1.png)](https://dc.musicium.eu)
+[![Milrato Multi Bot](https://cdn.discordapp.com/attachments/742446682381221938/770056826724679680/test1.png)](https://dc.milrato.eu)
+
+## Sponsors
+
+### BEST HOSTING | Bittmax.de
 BITTMAX Quality is their solution.
 Bittmax is our first and probably most important sponsor!
 
@@ -122,7 +134,7 @@ Bittmax is our first and probably most important sponsor!
 GET **5%** OFF EVERYTHING FOR EVER!
 Code: **`x10`**
 
-## MC-Host24.de
+### MC-Host24.de
 MC-Host24.de is selling the Best Digital Hosting Services ever!
 Like For games..
 
@@ -139,19 +151,3 @@ Like For games..
 
 **Website:**
 [mc-host24.de](https://mc-host24.de/user/affiliate/3121])
-
-
-## SUPPORT ME
-
-You can always Support me by inviting one of my **own Discord Bots**
-
-[![Musicium Music Bot](https://cdn.discordapp.com/attachments/742446682381221938/770055673965707264/test1.png)](https://musicium.eu)
-[![Milrato Multi Bot](https://cdn.discordapp.com/attachments/742446682381221938/770056826724679680/test1.png)](https://milrato.eu)
-
-[OTHER BOTS](https://bots.musicium.eu)
-
-[| fork my repository  |](https://github.com/user/repository/fork)
-[watch this repo  |](https://github.com/user/repository/subscription)
-[create issue |](https://github.com/user/repository/issues/new)
-
-*Both bots are still in Development, and will always be in development, this means always uptodate and always online and always improving!*
