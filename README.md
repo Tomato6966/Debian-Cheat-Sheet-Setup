@@ -15,93 +15,65 @@ How to setup your Linux Server and install nodejs, python, ffmpeg and java. Work
 - `$` ```apt-get install sudo```
 
 **2. Install all needed dependences**
-- `$` ```sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev```
+- `$` ```sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev curl```
 
 ## Installing nodejs v15 && npm v7.4
-**1. Update all pkgs**
-- `$` ```sudo apt update```
-
-**2. Install Curl**
-- `$` ```sudo apt install -y build-essential curl```
-
-**3. Load the Nodejs source**
-- `$` ```curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -```
-
-**4. Install nodejs globally**
-- `$` ```sudo apt install -y nodejs```
+```
+sudo apt update
+sudo apt install -y build-essential curl
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt install -y nodejs
+```
 
 ## Installing yarn (optional)
-
-**1. Load the YARN source**
-- `$` ```curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -```
-
-**2. DOWNLOAD**
-- `$` ```echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list```
-
-**3. Update all pkgs**
-- `$` ```sudo apt update```
-
-**4. Install yarn globally**
-- `$` ```sudo apt install -y yarn```
+```
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install -y yarn
+```
 
 
 ## Install python
 
-### Installing 2.7.3
-
-- `$` ```sudo apt-get install python-pip```
+### Installing pip
+```
+sudo apt-get install python-pip
+```
+OR:
+```
+sudo apt-get install python3-pip
+```
 
 ### Installing any version, here 3.9.1
-**1. Get the Source**
-- `$` ```curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz```
-
-**2. Extract the tar file**
-- `$` ```tar -xf Python-3.9.1.tar.xz```
-
-**3. Go to the new File**
-- `$` ```cd Python-3.9.1```
-
-**4. Configure the setup**
-- `$` ```./configure --enable-optimizations```
-
-**5. And create it**
-- `$` ```make -j 4```
-
-**6. Install python from the setup**
-- `$` ```sudo make altinstall```
-
-**7. Verify the Python installation**
-- `$` ```python3.9 --version```
+```
+curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz
+tar -xf Python-3.9.1.tar.xz
+cd Python-3.9.1
+./configure --enable-optimizations
+make -j 4
+sudo make altinstall
+python3.9 --version
+```
 
 ## Install FFMPEG
+```
+sudo apt update
+sudo apt install ffmpeg
+ffmpeg -version
+```
 
-**1. Update all pkgs**
-- `$` ```sudo apt update ```
 
-**2. Install ffmpeg**
-- `$` ```sudo apt install ffmpeg ```
+## Install Java 13
+```
+wget https://download.java.net/openjdk/jdk13/ri/openjdk-13+33_linux-x64_bin.tar.gz
+sudo mkdir -p /usr/lib/jvm
+sudo tar zxvf openjdk-13+33_linux-x64_bin.tar.gz -C /usr/lib/jvm
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-13/bin/java" 1
+sudo update-alternatives --set java /usr/lib/jvm/jdk-13/bin/java
+java -version
+```
 
-**3. Verify the ffmpeg installation**
-- `$` ```ffmpeg -version ```
-
-## Installing Java (optional)
-- `$` ```echo "deb http://ppa.launchpad.net/linuxuprising/java/ubuntu bionic main" | sudo tee/etc/apt/sources.list.d/linuxuprising-java.list```
-
-- `$` ```sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 73C3DB2A```
-- `$` ```sudo apt update```
-- `$` ```sudo apt install oracle-java11-set-default```
-- `$` ```sudo apt install openjdk-11-jdk```
-
-### Manual installation of Java
-- `$` ```curl -O https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz```
-- `$` ```tar zxvf openjdk-11.0.2_linux-x64_bin.tar.gz```
-- `$` ```sudo mv jdk-11* /usr/local/```
-- `$` ```sudo vim /etc/profile.d/jdk.sh```
-#### ADD:
-- ```export JAVA_HOME=/usr/local/jdk-11.0.2 ```
-
-   ```export PATH=$PATH:$JAVA_HOME/bin```
-- `$` ```java -version```
 
 # SUPPORT ME AND MILRATO DEVELOPMENT
 
