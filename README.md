@@ -21,7 +21,7 @@ apt-get install sudo
 sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev curl
 ```
 
-## Installing nodejs v15 && npm v7.4
+## Installing nodejs v16 && npm v7.4
 ```
 sudo apt update
 sudo apt install -y build-essential curl
@@ -44,12 +44,12 @@ sudo apt install -y yarn
 ```
 sudo apt-get install python-pip
 ```
-OR:
+#### OR:
 ```
 sudo apt-get install python3-pip
 ```
 
-### Installing any version, here 3.9.1
+### Installing any other Python-Version, here 3.9.1 *It will take at least 5 Minutes, just wait...*
 ```
 curl -O https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tar.xz
 tar -xf Python-3.9.1.tar.xz
