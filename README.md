@@ -12,10 +12,14 @@ How to setup your Linux Server and install nodejs, python, ffmpeg and java. Work
 
 ## installing essentials!
 **1. Install sudo**
-```apt-get install sudo```
+```
+apt-get install sudo
+```
 
 **2. Install all needed dependences**
-```sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev curl```
+```
+sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev curl
+```
 
 ## Installing nodejs v15 && npm v7.4
 ```
