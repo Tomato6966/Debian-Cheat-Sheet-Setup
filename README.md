@@ -10,25 +10,25 @@ How to setup your Linux Server and install nodejs, python, ffmpeg and java. Work
 # Console cmds
 *Those commands are all needed to install and setup a Debian (Linux) Server for Bot hosting, and general stuff like everything!*
 
-- [**Installing Essentials!**](#-Installing-Essentials!)
+- [**Installing Essentials!**](#Installing-Essentials!)
 
-- [**Installing nodejs v16 && npm v7.4**](#-Installing-nodejs-v16-&&-npm-v7.4)
+- [**Installing nodejs v16 && npm v7.4**](#Installing-nodejs-v16-&&-npm-v7.4)
 
-- [**Installing yarn (optional)**](#-Installing-yarn-(optional))
+- [**Installing yarn (optional)**](#Installing-yarn-(optional))
 
-- [**Install python**](#-Install-python)
+- [**Install python**](#Install-python)
 
-> - [**Installing pip**](#-Installing-pip)
+> - [**Installing pip**](#Installing-pip)
 
-> - [**Installing pip3**](#-Installing-pip3)
+> - [**Installing pip3**](#Installing-pip3)
 
-> - [**Installing python3.9**](#-Installing-any-other-Python-Version,-here-3.9.1-It-will-take-at-least-5-Minutes,-just-wait...)
+> - [**Installing python3.9**](#Installing-any-other-Python-Version,-here-3.9.1-It-will-take-at-least-5-Minutes,-just-wait...)
 
-- [**Install FFMPEG**](#-Install-FFMPEG)
+- [**Install FFMPEG**](#Install-FFMPEG)
 
-- [**Install Java 13**](#-Install-Java-13)
+- [**Install Java 13**](#Install-Java-13)
 
-- [**Install a Lighttpd Server with php**](#-Install-a-Lighttpd-Server-with-php)
+- [**Install a Lighttpd Server with php**](#Install-a-Lighttpd-Server-with-php)
 
 
 ## Installing Essentials!
@@ -61,7 +61,7 @@ sudo apt install -y yarn
 ```
 sudo apt-get install python-pip
 ```
-#### OR:
+### Installing-pip3
 ```
 sudo apt-get install python3-pip
 ```
