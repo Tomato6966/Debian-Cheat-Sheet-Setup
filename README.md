@@ -78,6 +78,93 @@ sudo update-alternatives --set java /usr/lib/jvm/jdk-13/bin/java
 java -version
 ```
 
+## Install a Lighttpd Server with php
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install lighttpd
+sudo systemctl start lighttpd
+sudo systemctl enable lighttpd
+sudo apt-get install mariadb-server mariadb-client -y
+sudo mysql_secure_installation
+```
+```
+Answer all the questions as shown below:
+Change the root password? [Y/n] n
+Remove anonymous users? [Y/n] Y
+Disallow root login remotely? [Y/n] Y
+Remove test database and access to it? [Y/n] Y
+Reload privilege tables now? [Y/n] Y
+```
+```
+sudo apt-get install php php-cgi php-fpm php-mysql -y
+sudo nano /etc/php/7.3/fpm/php.ini
+```
+Change the following line: (ctrl + w search for it)
+```
+cgi.fix_pathinfo=1
+```
+```
+sudo nano /etc/php/7.3/fpm/pool.d/www.conf
+```
+Find the following line:
+```
+listen = /run/php/php7.3-fpm.sock
+```
+And replace it with the following line:
+```
+listen = 127.0.0.1:9000
+```
+```
+sudo systemctl restart php7.3-fpm
+```
+```
+sudo nano /etc/lighttpd/conf-available/15-fastcgi-php.conf
+```
+Find the following line:s
+```
+"bin-path" => "/usr/bin/php-cgi",
+"socket" => "/var/run/lighttpd/php.socket",
+```
+And replace it with the following lines:
+```
+"host" => "127.0.0.1",
+"port" => "9000",
+```
+```
+sudo lighty-enable-mod fastcgi
+sudo lighty-enable-mod fastcgi-php
+```
+```
+sudo nano /etc/lighttpd/conf-available/example.com.conf
+```
+Add the following lines:
+```
+$HTTP["host"] == "www.example.com" {
+    server.document-root = "/var/www/html/"
+    server.errorlog      = "/var/log/lighttpd/example.com-error.log"
+}
+```
+Save and close the file when you are finished. Then, enable the Virtual host with the following command:
+```
+ln -s /etc/lighttpd/conf-available/example.com.conf /etc/lighttpd/conf-enabled/
+```
+Now feel free to code your php website!
+```
+sudo nano /var/www/html/index.php
+```
+Example Content:
+```
+<?php phpinfo(); ?>
+```
+Save and close the file. Then, change the ownership of the Lighttpd document root directory to www-data with the following command:
+```
+chown -R www-data:www-data /var/www/html/
+```
+Finally, restart Lighttpd service to apply all the configuration changes:
+```
+systemctl restart lighttpd
+```
 
 # SUPPORT ME AND MILRATO DEVELOPMENT
 
