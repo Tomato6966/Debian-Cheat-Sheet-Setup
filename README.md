@@ -10,10 +10,10 @@ How to setup your Linux Server and install nodejs, python, ffmpeg and java. Work
 # Console cmds
 *Those commands are all needed to install and setup a Debian (Linux) Server for Bot hosting, and general stuff like everything!*
 
-[Go to installing essentialsn](## installing essentials!)
+[Go to installing essentials](##installing-essentials!)
 
 
-## installing essentials!
+##installing-essentials!
 **1. Install sudo**
 ```
 apt-get install sudo
