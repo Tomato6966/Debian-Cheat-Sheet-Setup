@@ -1,7 +1,7 @@
 echo "Setup-Logger :: Starting the Setup"
 
-mkdir tempFolder
-cd tempFolder
+mkdir setuppedThings
+cd setuppedThings
 
 
 apt update -y
@@ -100,12 +100,11 @@ cp .bashrc ~/.bashrc
 
 
 
-echo "Setup-Logger :: deleting the temp folder again"
+echo "Setup-Logger :: deleting the tar Files"
 
-cd ..
-rm tempFolder -rf
+rm *.ta* -rf
 
-
+echo "Setup-Logger :: Make sure to KEEP the python Folder!"
 echo "Setup-Logger :: Installings are done, you can swap java versions with: sudo update-alternatives --config java"
 
 java -version
