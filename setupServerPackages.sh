@@ -4,12 +4,12 @@ mkdir setuppedThings
 cd setuppedThings
 
 
-apt update -y
-apt upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
-apt-get install -y sudo zip git-all curl jq file unzip make gcc g++ python python-dev libtool build-essential wget zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev htop nano
+sudo apt-get install -y sudo zip git-all curl jq file unzip make gcc g++ python python-dev libtool build-essential wget zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev htop nano
 
-apt-get install aptitude nginx ufw 
+sudo apt-get install -y aptitude nginx ufw 
 
 apt update -y
 apt upgrade -y
