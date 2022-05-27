@@ -109,11 +109,15 @@ rm *.ta* -rf
 echo "Setup-Logger :: Make sure to KEEP the python Folder!"
 echo "Setup-Logger :: Installings are done, you can swap java versions with: sudo update-alternatives --config java"
 
+echo "FFmpeg Version: "
+ffmpeg -version | grep " version"
+echo "Default Selected Java Version: "
 java -version
-ffmpeg -version
-java -version
+echo "Python Version: "
 python3.9 --version
+echo "Nodejs Version: "
 node -v
+echo "NPM Version: "
 npm --version
 
 
