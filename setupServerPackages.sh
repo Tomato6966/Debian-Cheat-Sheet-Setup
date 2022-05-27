@@ -3,6 +3,8 @@ echo "Setup-Logger :: Starting the Setup"
 mkdir setuppedThings
 cd setuppedThings
 
+/etc/init.d/apache2 stop
+apt-get purge apache* -y
 
 sudo apt-get update -y
 sudo apt-get upgrade -y
