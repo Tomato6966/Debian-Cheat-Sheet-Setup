@@ -12,19 +12,32 @@ lavalink:
       vimeo: true
       http: true
       local: false
-    bufferDurationMs: 200 # It cant be lower then 200 ... it's capped there
-    frameBufferDurationMs: 200 # How many milliseconds of audio to keep buffered
-    youtubePlaylistLoadLimit: 6 # Number of pages at 100 each
-    playerUpdateInterval: 5 # How frequently to send player updates to clients, in seconds
+    bufferDurationMs: 500 # The duration of the NAS buffer. Higher values fare better against longer GC pauses (lower == faster == more cpu usage == sometimes buggy) | SHOULD AT LEAST BE AS BIG AS YOUR DISCORD BOT PING (min. is 200)
+    frameBufferDurationMs: 5000 # How many milliseconds of audio to keep buffered | lower == faster == more cpu usage == not recommended to go lower then 1000
+    youtubePlaylistLoadLimit: 5 # Number of pages at 100 each
+    opusEncodingQuality: 10 # Opus encoder quality. Valid values range from 0 to 10, where 10 is best quality but is the most expensive on the CPU. ( you do not hear a difference between 0 and 10, and only see a cpu difference at 1k + connections )
+    resamplingQuality: LOW # Quality of resampling operations. Valid values are LOW, MEDIUM and HIGH, where HIGH uses the most CPU. ( you do not hear a difference )
+    trackStuckThresholdMs: 5000 # The threshold for how long a track can be stuck. A track is stuck if does not return any audio data. (default 10000, i recommend 5000 to keep it smooth, if you have sub 100mbps speed, then put it back to 10000)
+    playerUpdateInterval: 5 # How frequently to send player updates to clients, in seconds (If it's localhost, then you can also do 1 or 2, which wouldn't make any problems. lower == more traffic == more cpu usage especially at javascript
+    useSeekGhosting: true # Seek ghosting is the effect where whilst a seek is in progress, the audio buffer is read from until empty, or until seek is ready. (true == smooth transition (play filter once it's rendered) | false == instant (stop audio - render filter - play it) but you hear a short pause
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
     #ratelimit:
-      #ipBlocks: ["1.0.0.0/8", "..."] # list of ip blocks
+      #ipBlocks: ["1234:1234:1234:1234::/64"] # list of ip blocks
       #excludedIps: ["...", "..."] # ips which should be explicit excluded from usage by lavalink
       #strategy: "RotateOnBan" # RotateOnBan | LoadBalance | NanoSwitch | RotatingNanoSwitch
       #searchTriggersFail: true # Whether a search 429 should trigger marking the ip as failing
       #retryLimit: -1 # -1 = use default lavaplayer value | 0 = infinity | >0 = retry will happen this numbers times
+    #youtubeConfig: # Required for avoiding all age restrictions by YouTube, some restricted videos still can be played without.
+      #email: "" # Email of Google account
+      #password: "" # Password of Google account
+    #httpConfig: # Useful for blocking bad-actors from ip-grabbing your music node and attacking it, this way only the http proxy will be attacked
+      #proxyHost: "localhost" # Hostname of the proxy, (ip or domain)
+      #proxyPort: 3128 # Proxy port, 3128 is the default for squidProxy
+      #proxyUser: "" # Optional user for basic authentication fields, leave blank if you don't use basic auth
+      #proxyPassword: "" # Password for basic authentication
+      
   plugins:
     - dependency: "me.rohank05:lavalink-filter-plugin:0.0.1" # replace x.x.x with the latest release tag!
       repository: "https://jitpack.io"
@@ -68,8 +81,8 @@ sentry:
 
 logging:
   file:
-    max-history: 30
-    max-size: 1GB
+    max-history: 10 # i like to keep it low to save resources
+    max-size: 10MB
   path: ./logs/
 
   level:
