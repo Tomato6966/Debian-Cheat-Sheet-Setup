@@ -56,7 +56,7 @@ plugins:
         clientSecret: "FILL IT IN!"
         countryCode: "EU" # the country code you want to use for filtering the artists top tracks. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
     applemusic:
-        countryCode: "EU" # the country code you want to use for filtering the artists top tracks and language. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+        countryCode: "US" # the country code you want to use for filtering the artists top tracks and language. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
   dunctebot:
       ttsLanguage: "en-AU" # language of the TTS engine
       sources:
