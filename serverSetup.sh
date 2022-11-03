@@ -75,9 +75,8 @@ bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/too
 set -e
 echo "Milrato-Setup [::] Installed Oh-my-bash: https://github.com/ohmybash/oh-my-bash"
 
-cd ~
 set +e
-wget -O .bashrc .bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
+wget -O ~/.bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
 source ~/.bashrc
 set -e
 echo "Milrato-Setup [::] Applied custom .bashrc"
