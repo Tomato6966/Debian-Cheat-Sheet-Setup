@@ -30,36 +30,16 @@ echo "Milrato-Setup [::] Installed default utilities"
 
 
 
-apt-get install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
+apt-get -y install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release xdg-utils
 echo "Milrato-Setup [::] Installed default libs and encoders for many packages"
 
 
-set +e
-bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
-set -e
-echo "Milrato-Setup [::] Installed Oh-my-bash: https://github.com/ohmybash/oh-my-bash"
-
-
-
-cd ~
-set +e
-wget -O .bashrc .bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
-source ~/.bashrc
-set -e
-echo "Milrato-Setup [::] Applied custom .bashrc"
-
-
-
-apt update -y
-apt upgrade -y
-apt install -y build-essential curl
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 apt-get install -y nodejs
 echo "Milrato-Setup [::] Installed nodejs"
 
 sudo apt-get install -y ffmpeg python3-pip
 echo "Milrato-Setup [::] Installed pip3 and ffmpeg"
-
 
 
 wget https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_linux-x64_bin.tar.gz
@@ -90,7 +70,17 @@ curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.
 sudo apt-get install speedtest
 echo "Milrato-Setup [::] Installed speedtest"
 
+set +e
+bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
+set -e
+echo "Milrato-Setup [::] Installed Oh-my-bash: https://github.com/ohmybash/oh-my-bash"
 
+cd ~
+set +e
+wget -O .bashrc .bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
+source ~/.bashrc
+set -e
+echo "Milrato-Setup [::] Applied custom .bashrc"
 
 echo "Milrato-Setup [::] Everything is setup"
 echo "Milrato-Setup [::] A reboot is recommended"
