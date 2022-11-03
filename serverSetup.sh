@@ -68,6 +68,7 @@ sudo tar zxvf openjdk-18.0.2.1_linux-x64_bin.tar.gz -C /usr/lib/jvm
 sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-18.0.2.1/bin/java" 1
 sudo update-alternatives --set java /usr/lib/jvm/jdk-18.0.2.1/bin/java
 java -version
+rm openjdk-18.0.2.1_linux-x64_bin.tar.gz
 echo "Milrato-Setup [::] Installed java version 18 (openjdk)"
 
 
