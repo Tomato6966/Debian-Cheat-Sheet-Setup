@@ -77,9 +77,9 @@ echo "Milrato-Setup [::] Installed Oh-my-bash: https://github.com/ohmybash/oh-my
 
 set +e
 wget -O ~/.bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
-source ~/.bashrc
 set -e
-echo "Milrato-Setup [::] Applied custom .bashrc"
+
+echo "Milrato-Setup [::] Applied custom .bashrc, to load it do: source ~/.bashrc, or reload the current session"
 
 echo "Milrato-Setup [::] Everything is setup"
 echo "Milrato-Setup [::] A reboot is recommended"
