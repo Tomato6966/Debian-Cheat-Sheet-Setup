@@ -34,15 +34,18 @@ apt-get install ca-certificates fonts-liberation libappindicator3-1 libasound2 l
 echo "Milrato-Setup [::] Installed default libs and encoders for many packages"
 
 sleep 0.5
-
+set +e
 bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
+set -e
 echo "Milrato-Setup [::] Installed Oh-my-bash: https://github.com/ohmybash/oh-my-bash"
 
 sleep 0.5
 
 cd ~
-wget -O index.html .bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
+set +e
+wget -O .bashrc .bashrc https://raw.githubusercontent.com/Tomato6966/Debian-Cheat-Sheet-Setup/main/.bashrc
 source ~/.bashrc
+set -e
 echo "Milrato-Setup [::] Applied custom .bashrc"
 
 sleep 0.5
