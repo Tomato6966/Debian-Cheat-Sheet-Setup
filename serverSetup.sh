@@ -42,13 +42,13 @@ sudo apt-get install -y ffmpeg python3-pip
 echo "Milrato-Setup [::] Installed pip3 and ffmpeg"
 
 
-wget https://download.java.net/java/GA/jdk18.0.2.1/db379da656dc47308e138f21b33976fa/1/GPL/openjdk-18.0.2.1_linux-x64_bin.tar.gz
+wget https://download.java.net/openjdk/jdk18/ri/openjdk-18+36_linux-x64_bin.tar.gz
 sudo mkdir -p /usr/lib/jvm
-sudo tar zxvf openjdk-18.0.2.1_linux-x64_bin.tar.gz -C /usr/lib/jvm
-sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-18.0.2.1/bin/java" 1
-sudo update-alternatives --set java /usr/lib/jvm/jdk-18.0.2.1/bin/java
+sudo tar zxvf openjdk-18+36_linux-x64_bin.tar.gz -C /usr/lib/jvm
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-18/bin/java" 1
+sudo update-alternatives --set java /usr/lib/jvm/jdk-18/bin/java
 java -version
-rm openjdk-18.0.2.1_linux-x64_bin.tar.gz
+rm openjdk-18+36_linux-x64_bin.tar.gz
 echo "Milrato-Setup [::] Installed java version 18 (openjdk)"
 
 
