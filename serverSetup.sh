@@ -25,7 +25,7 @@ echo "Milrato-Setup [::] Removed default installed apache package"
 
 
 
-apt-get -y install screen git-all curl jq file unzip make gcc g++ python python-dev libtool build-essential wget zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev htop nano
+apt-get -y install screen git-all rsync curl jq file unzip make gcc g++ python python-dev libtool build-essential wget zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev htop nano
 echo "Milrato-Setup [::] Installed default utilities"
 
 
