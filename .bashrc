@@ -135,3 +135,4 @@ if ! grep -q $hostnamevar "/etc/hosts"; then
   echo "127.0.0.1 $hostnamevar" >> /etc/hosts && echo "::1 $hostnamevar" >> /etc/hosts
   echo "Added $hostnamevar - hostname"
 fi
+clear
