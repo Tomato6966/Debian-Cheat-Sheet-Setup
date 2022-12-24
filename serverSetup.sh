@@ -34,7 +34,7 @@ apt-get -y install ca-certificates fonts-liberation libappindicator3-1 libasound
 echo "Milrato-Setup [::] Installed default libs and encoders for many packages"
 
 
-curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 apt-get install -y nodejs
 echo "Milrato-Setup [::] Installed nodejs"
 
