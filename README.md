@@ -28,12 +28,15 @@
     - [1.12 User Information and Management](https://github.com/Tomato6966/how-to-setup-your-linux-server/wiki/1.12-User-Information-and-Management)
     - [1.13 Speedtest](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/1.13-Speedtest)
     - [1.14 Clear Cache](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/1.14-Clear-Cache)
+    - [1.15 Disable Sleeping Processes (Suspending)](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/1.15-Disable-Sleeping-Processes-(Suspending))
+    - [1.16 Remove Welcome Message](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/1.16-Remove-Welcome-Message)
 
 ***
 
 - [**__2 Do that before everything__**](https://github.com/Tomato6966/how-to-setup-your-linux-server/wiki/2-Do-that-Before!)
     - [2.1 Youtube Tutorial](https://github.com/Tomato6966/how-to-setup-your-linux-server/wiki/2.1-Youtube-Tutorial)
     - [2.2 Installing Essentials](https://github.com/Tomato6966/how-to-setup-your-linux-server/wiki/2.2-Installing-Essentials)
+    - [2.3 Insta Setup Linux Server](https://github.com/Tomato6966/how-to-setup-your-linux-server/wiki/2.3-Insta-Setup-Linux-Server)
 
 ***
 
@@ -45,6 +48,7 @@
         - [*3.3.1 pip*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.3.1-pip)
         - [*3.3.2 pip3*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.3.2-pip3)
         - [*3.3.3 Python3.9*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.3.3-python3.9)
+        - [*3.3.4 Python3.10*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.3.4-python3.10)
     - [3.4 FFMPEG](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.4-ffmpeg)
     - [3.5 Java](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5-java)
         - [*3.5.1 Java 8*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5.1-java-8)
@@ -52,29 +56,19 @@
         - [*3.5.3 Java 13*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5.3-java-13)
         - [*3.5.4 Java 15*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5.4-java-15)
         - [*3.5.5 Java 16*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5.5-java-16)
-        - [*3.5.6 Troubleshooting*](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/3.5.6-Troubleshooting)
+        - [*3.5.6 Java 17*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5.6-java-17)
+        - [*3.5.7 Java 18*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.5.7-java-18)
+        - [*3.5.8 Troubleshooting*](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/3.5.8-Troubleshooting)
     - [3.6 Lighttpd with php](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.6-Lighttpd-with-php)
     - [3.7 Git](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.7-Git)
+    - [3.8 Apache Webserver](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.8-apache-webserver)
+        - [*3.8.1 MySQL*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.8.1-mysql)
+        - [*3.8.2 PHP*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.8.2-php)
+        - [*3.8.3 SSL Https*](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/3.8.3-ssl-https)
 - [4 pm2 Tutorial](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/4-pm2-tutorial)
-- [5 Support Me](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/5-support-me)
-
-<br/>
-  
-***
-
-## [Discord Server 😎](https://discord.gg/milrato) | [Website](https://milrato.dev)
-<a href="https://discord.gg/milrato"><img src="https://discord.com/api/guilds/773668217163218944/widget.png?style=banner2"></a>
-
-***
-
-## SUPPORT ME AND MILRATO DEVELOPMENT
-
-> You can always Support me by inviting one of my **own Discord Bots**
-
-[![2021's best Music Bot | Lava Music](https://cdn.discordapp.com/attachments/748533465972080670/817088638780440579/test3.png)](https://lava.milrato.dev)
-[![Musicium Music Bot](https://cdn.discordapp.com/attachments/742446682381221938/770055673965707264/test1.png)](https://musicium.musicium.dev)
-[![Milrato Multi Bot](https://cdn.discordapp.com/attachments/742446682381221938/770056826724679680/test1.png)](https://milrato.milrato.dev)
-
-# Credits
-
-> If consider using this Bot, make sure to credit me!
+- [5 Mongodb (Database)](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/5-Mongodb-Database)
+- [6 lavalink Tutorial](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/6-lavalink-tutorial)
+- [7 Linux Security](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/7-Linux-Security)
+    - [7.1 Firewall Security-Setup](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/7.1-Firewall-Security-Setup)
+    - [7.2 Tarpit False-Login loop](https://github.com/Tomato6966/Debian-Cheat-Sheet-Setup/wiki/7.2-Tarpit-False-Login-loop)
+- [8 Support Me](https://github.com/Tomato6966/Debian-Cheat-Sheat-Setup/wiki/8-support-me)
