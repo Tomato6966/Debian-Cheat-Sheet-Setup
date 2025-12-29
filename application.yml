@@ -5,7 +5,7 @@ lavalink:
   server:
     password: "youshallnotpass"
     sources:
-      youtube: true
+      youtube: false # put on false if you use youtube-plugin
       bandcamp: true
       soundcloud: true
       twitch: true
@@ -37,55 +37,140 @@ lavalink:
       #proxyPort: 3128 # Proxy port, 3128 is the default for squidProxy
       #proxyUser: "" # Optional user for basic authentication fields, leave blank if you don't use basic auth
       #proxyPassword: "" # Password for basic authentication
-      
-  plugins:
-    - dependency: "me.rohank05:lavalink-filter-plugin:0.0.1" # replace x.x.x with the latest release tag!
-      repository: "https://jitpack.io"
-
+    plugins:
+        - dependency: 'dev.lavalink.youtube:youtube-plugin:1.16.0' # https://github.com/lavalink-devs/youtube-source
+        - dependency: 'com.github.topi314.lavasrc:lavasrc-plugin:4.8.1' # https://github.com/topi314/LavaSrc
+        - dependency: 'com.github.topi314.lavasearch:lavasearch-plugin:1.0.0' # https://github.com/topi314/LavaSearch
+        - dependency: 'com.dunctebot:skybot-lavalink-plugin:1.7.0' # https://github.com/DuncteBot/skybot-lavalink-plugin
+        - dependency: 'com.github.devoxin:lavadspx-plugin:0.0.5' # https://github.com/devoxin/LavaDSPX-Plugin
+          repository: 'https://jitpack.io'
+        - dependency: 'com.github.topi314.lavalyrics:lavalyrics-plugin:1.1.0' # https://github.com/topi314/LavaLyrics
+        - dependency: 'me.duncte123:java-lyrics-plugin:1.6.6' # https://github.com/DuncteBot/java-timed-lyrics
 plugins:
-  topissourcemanagers:
-    providers: # Custom providers for track loading. This is the default
-      - "ytsearch:\"%ISRC%\"" # Will be ignored if track does not have an ISRC. See https://en.wikipedia.org/wiki/International_Standard_Recording_Code
-      - "ytsearch:%QUERY%" # Will be used if track has no ISRC or no track could be found for the ISRC
-      - "scsearch:%QUERY%" # you can add multiple other fallback sources here
-    sources:
-      spotify: true # Enable Spotify source
-      applemusic: true # Enable Apple Music source
-    spotify:
-        clientId: "FILL IT IN!"
-        clientSecret: "FILL IT IN!"
-        countryCode: "EU" # the country code you want to use for filtering the artists top tracks. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-    applemusic:
-        countryCode: "US" # the country code you want to use for filtering the artists top tracks and language. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-  dunctebot:
-      ttsLanguage: "en-AU" # language of the TTS engine
-      sources:
-          # true = source enabled, false = source disabled
-          getyarn: true # www.getyarn.io
-          clypit: true # www.clyp.it
-          tts: true # speak:Words to speak
-          pornhub: true # should be self-explanatory
-          reddit: true # should be self-explanatory
-          ocremix: false # www.ocremix.org
-          tiktok: false # tiktok.com
-          mixcloud: true # mixcloud.com
-
+    lyrics:
+        countryCode: de
+        geniusApiKey: "InIbz5Yw46rp5Xwto1SLEF0h8-gKjcEAWsYOlr3s0RVjKzBEY7vXBacm21B1rBpr"
+    lavalyrics:
+        sources:
+            - 'genius'
+            - 'spotify'
+            - 'deezer'
+            - 'youtube'
+            - 'yandexMusic'
+    youtube:
+        remoteCipher:
+            url: "http://[::]:2330" # The base URL of your remote cipher server.
+            password: "<cipherpass>" # The password to authenticate with your remote cipher server.
+            userAgent: "main-lavalink" # Optional user-agent header, used for metrics on the backend.
+        enabled: true
+        allowSearch: true
+        allowDirectVideoIds: true
+        allowDirectPlaylistIds: true
+        clients:
+            - "TVHTML5EMBEDDED"
+            - "TV"
+            - "MUSIC"
+            - "ANDROID_VR"
+            - "WEB"
+            - "WEBEMBEDDED"
+        MUSIC:
+            playback: false
+        TV:
+            playback: true
+        TVHTML5EMBEDDED:
+            playback: true
+        WEB:
+            playback: true
+        WEBEMBEDDED:
+            playlistLoading: false
+            searching: false
+        oauth:
+            enabled: true
+            refreshToken: "..."
+        pot:
+            token: "..."
+            visitorData: "..."
+    lavasrc:
+        providers:
+            - 'ytsearch:"%ISRC%"'
+            - 'dzisrc:%ISRC%'
+            - 'ytsearch:%QUERY%'
+            - 'dzsearch:%QUERY%'
+            - 'scsearch:%QUERY%'
+        sources:
+            spotify: true
+            applemusic: true
+            deezer: true
+            yandexmusic: true
+            flowerytts: true
+            youtube: true
+        lyrics-sources:
+            spotify: true
+            deezer: true
+            youtube: true
+            yandexmusic: true
+        spotify:
+            clientId: '...'
+            clientSecret: '...'
+            spDc: "..."
+            countryCode: 'US'
+            playlistLoadLimit: 6
+            albumLoadLimit: 4
+        applemusic:
+            countryCode: 'US'
+            mediaAPIToken: '...'
+            playlistLoadLimit: 6
+            albumLoadLimit: 6
+        deezer:
+            masterDecryptionKey: 'g..............1'
+            arl: '.....'
+        youtube:
+            countryCode: 'US'
+        yandexmusic:
+            accessToken: '....'
+            playlistLoadLimit: 4
+            albumLoadLimit: 8
+            artistLoadLimit: 8
+        flowerytts:
+            voice: 'Ava'
+            translate: false
+            silence: 0
+            speed: 1.0
+            audioFormat: 'mp3'
+    dunctebot:
+        ttsLanguage: 'en-US'
+        sources:
+            getyarn: true
+            clypit: true
+            tts: true
+            pornhub: true
+            reddit: true
+            ocremix: true
+            tiktok: true
+            mixcloud: true
+            soundgasm: true
 metrics:
-  prometheus:
-    enabled: false
-    endpoint: /metrics
-
+    prometheus:
+        enabled: false
 sentry:
-  dsn: ""
-  environment: ""
-
+    dsn: ''
+    environment: ''
 logging:
-  file:
-    max-history: 10 # i like to keep it low to save resources
-    max-size: 10MB
-  path: ./logs/
-
-  level:
-    root: INFO
-    lavalink: INFO
-
+    file:
+        max-history: 1
+        max-size: 5MB
+    path: ./logs/
+    level:
+        root: INFO
+        lavalink: DEBUG
+    request:
+        enabled: true
+        includeClientInfo: true
+        includeHeaders: true
+        includeQueryString: true
+        includePayload: true
+        maxPayloadLength: 10000
+    logback:
+        rollingpolicy:
+            max-file-size: 5MB
+            max-history: 15
